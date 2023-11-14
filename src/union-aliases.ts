@@ -1,3 +1,4 @@
+// Union type = Combinable
 type Combinable = number | string;
 
 function combine(
