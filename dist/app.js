@@ -58,3 +58,16 @@ moveAnimal({ type: "bird", flyingSpeed: 10 });
 moveAnimal({ type: "horse", runningSpeed: 4 });
 const userInputElement = document.getElementById("user-input");
 userInputElement.innerHTML = "Hi there! Casting works!!";
+const errorBag = {
+    email: "Not a valid email",
+    username: "Must start with a capital character",
+};
+const fetchedUserData = {
+    id: "u1",
+    name: "Alun",
+    job: { title: "CEO", description: "My very own company!" },
+};
+console.log(fetchedUserData.job.title);
+const userInput = " ";
+const storedData = userInput !== null && userInput !== void 0 ? userInput : "DEFAULT";
+console.log(storedData);

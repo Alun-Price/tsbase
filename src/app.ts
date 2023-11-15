@@ -35,6 +35,8 @@ type Numeric = number | boolean;
 
 type Universal = Combinable & Numeric;
 
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
 function add(a: Combinable, b: Combinable) {
   if (typeof a === "string" || typeof b === "string") {
     return a.toString() + b.toString();
@@ -107,3 +109,26 @@ const userInputElement = document.getElementById(
 )! as HTMLInputElement;
 
 userInputElement.innerHTML = "Hi there! Casting works!!";
+
+interface ErrorContainer {
+  [prop: string]: string;
+}
+
+const errorBag: ErrorContainer = {
+  email: "Not a valid email",
+  username: "Must start with a capital character",
+};
+
+const fetchedUserData = {
+  id: "u1",
+  name: "Alun",
+  job: { title: "CEO", description: "My very own company!" },
+};
+
+console.log(fetchedUserData.job.title);
+
+const userInput = " ";
+
+const storedData = userInput ?? "DEFAULT";
+
+console.log(storedData);
