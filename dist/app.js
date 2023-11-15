@@ -43,3 +43,18 @@ function useVehicle(vehicle) {
 }
 useVehicle(v1);
 useVehicle(v2);
+function moveAnimal(animal) {
+    let speed;
+    switch (animal.type) {
+        case "bird":
+            speed = animal.flyingSpeed;
+            break;
+        case "horse":
+            speed = animal.runningSpeed;
+    }
+    console.log("Moving with speed: ", speed);
+}
+moveAnimal({ type: "bird", flyingSpeed: 10 });
+moveAnimal({ type: "horse", runningSpeed: 4 });
+const userInputElement = document.getElementById("user-input");
+userInputElement.innerHTML = "Hi there! Casting works!!";
