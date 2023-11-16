@@ -35,13 +35,11 @@ class DataStorage {
         return [...this.data];
     }
 }
-const textStorage = new DataStorage();
-textStorage.addItem("Alun");
-textStorage.addItem("Sinead");
-textStorage.removeItem("Sinead");
-console.log(textStorage.getItems());
-const numberStorage = new DataStorage();
-numberStorage.addItem(1000);
-numberStorage.addItem(345);
-numberStorage.removeItem(345);
-console.log(numberStorage.getItems());
+function createCourseGoal(title, description, date) {
+    let courseGoal = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completeUntil = date;
+    return courseGoal;
+}
+const names = ["Alun", "Sinead"];
